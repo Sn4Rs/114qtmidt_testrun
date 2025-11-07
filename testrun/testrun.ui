@@ -125,7 +125,7 @@ QLabel {
    <item>
     <widget class="QLabel" name="titleLabel">
      <property name="text">
-      <string>System Configuration</string>
+      <string>Application Settings</string>
      </property>
      <property name="styleSheet">
       <string notr="true">font-size: 18pt; font-weight: bold; color: #2c3e50; margin-bottom: 10px;</string>
@@ -135,7 +135,7 @@ QLabel {
    <item>
     <widget class="QGroupBox" name="optionsGroup">
      <property name="title">
-      <string>Display Options</string>
+      <string>General Settings</string>
      </property>
      <layout class="QVBoxLayout" name="optionsLayout">
       <property name="spacing">
