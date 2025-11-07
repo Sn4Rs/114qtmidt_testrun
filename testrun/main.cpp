@@ -19,15 +19,24 @@ int main(int argc, char *argv[])
     
     QRect screenGeometry = screen->availableGeometry();
     
-    // Use the UI file dimensions directly
-    int windowWidth = 640;
-    int windowHeight = 480;
+    // Get window dimensions from the widget's size hint
+    QSize windowSize = w.sizeHint();
+    int windowWidth = windowSize.width() > 0 ? windowSize.width() : 640;
+    int windowHeight = windowSize.height() > 0 ? windowSize.height() : 480;
     int spacing = 20; // Space between windows
     
     // Calculate positions to center windows horizontally with spacing
     int totalWidth = windowWidth * 2 + spacing;
     int startX = (screenGeometry.width() - totalWidth) / 2;
     int startY = (screenGeometry.height() - windowHeight) / 2;
+    
+    // Ensure windows are not positioned off-screen
+    if (startX < screenGeometry.x()) {
+        startX = screenGeometry.x();
+    }
+    if (startY < screenGeometry.y()) {
+        startY = screenGeometry.y();
+    }
     
     // Position first window
     w.move(startX, startY);
