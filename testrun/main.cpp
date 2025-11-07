@@ -27,15 +27,27 @@ int main(int argc, char *argv[])
     
     // Calculate positions to center windows horizontally with spacing
     int totalWidth = windowWidth * 2 + spacing;
-    int startX = (screenGeometry.width() - totalWidth) / 2;
-    int startY = (screenGeometry.height() - windowHeight) / 2;
+    int startX = screenGeometry.x() + (screenGeometry.width() - totalWidth) / 2;
+    int startY = screenGeometry.y() + (screenGeometry.height() - windowHeight) / 2;
     
-    // Ensure windows are not positioned off-screen
+    // Ensure windows are not positioned off-screen (check all edges)
     if (startX < screenGeometry.x()) {
         startX = screenGeometry.x();
     }
     if (startY < screenGeometry.y()) {
         startY = screenGeometry.y();
+    }
+    if (startX + totalWidth > screenGeometry.right()) {
+        startX = screenGeometry.right() - totalWidth;
+        if (startX < screenGeometry.x()) {
+            startX = screenGeometry.x(); // Fallback if windows are too wide
+        }
+    }
+    if (startY + windowHeight > screenGeometry.bottom()) {
+        startY = screenGeometry.bottom() - windowHeight;
+        if (startY < screenGeometry.y()) {
+            startY = screenGeometry.y(); // Fallback if window is too tall
+        }
     }
     
     // Position first window
