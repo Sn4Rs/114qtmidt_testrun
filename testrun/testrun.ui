@@ -13,66 +13,18 @@
   <property name="windowTitle">
    <string>Application Settings</string>
   </property>
-  <widget class="QPushButton" name="pushButton">
-   <property name="geometry">
-    <rect>
-     <x>170</x>
-     <y>180</y>
-     <width>280</width>
-     <height>120</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>PushButton</string>
-   </property>
-  </widget>
-  <widget class="QWidget" name="widget" native="true">
-   <property name="geometry">
-    <rect>
-     <x>90</x>
-     <y>360</y>
-     <width>120</width>
-     <height>80</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QRadioButton" name="radioButton">
-   <property name="geometry">
-    <rect>
-     <x>150</x>
-     <y>130</y>
-     <width>111</width>
-     <height>24</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>RadioButton</string>
-   </property>
-  </widget>
-  <widget class="QCheckBox" name="checkBox">
-   <property name="geometry">
-    <rect>
-     <x>320</x>
-     <y>120</y>
-     <width>91</width>
-     <height>24</height>
-    </rect>
+  <layout class="QVBoxLayout" name="mainLayout">
+   <property name="leftMargin">
+    <number>20</number>
    </property>
    <property name="topMargin">
-    <number>30</number>
+    <number>20</number>
    </property>
-  </widget>
-  <widget class="QCheckBox" name="checkBox_2">
-   <property name="geometry">
-    <rect>
-     <x>380</x>
-     <y>400</y>
-     <width>91</width>
-     <height>24</height>
-    </rect>
+   <property name="rightMargin">
+    <number>20</number>
    </property>
    <property name="bottomMargin">
-    <number>30</number>
+    <number>20</number>
    </property>
    <item>
     <widget class="QLabel" name="titleLabel">
@@ -80,7 +32,7 @@
       <string>Application Settings</string>
      </property>
      <property name="styleSheet">
-      <string notr="true">font-size: 18pt; font-weight: bold; color: #2c3e50; margin-bottom: 10px;</string>
+      <string notr="true">font-size: 18pt; font-weight: bold; color: #2c3e50;</string>
      </property>
     </widget>
    </item>
