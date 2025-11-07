@@ -10,11 +10,18 @@ int main(int argc, char *argv[])
     
     // Get the available screen geometry
     QScreen *screen = QApplication::primaryScreen();
+    if (!screen) {
+        // Fallback positioning if no screen is available
+        w.show();
+        w2.show();
+        return a.exec();
+    }
+    
     QRect screenGeometry = screen->availableGeometry();
     
-    // Calculate window dimensions
-    int windowWidth = w.width();
-    int windowHeight = w.height();
+    // Use the UI file dimensions directly
+    int windowWidth = 640;
+    int windowHeight = 480;
     int spacing = 20; // Space between windows
     
     // Calculate positions to center windows horizontally with spacing
