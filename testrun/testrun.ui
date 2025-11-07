@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>testrun</string>
+   <string>Application Settings</string>
   </property>
   <widget class="QPushButton" name="pushButton">
    <property name="geometry">
@@ -58,8 +58,8 @@
      <height>24</height>
     </rect>
    </property>
-   <property name="text">
-    <string>CheckBox</string>
+   <property name="topMargin">
+    <number>30</number>
    </property>
   </widget>
   <widget class="QCheckBox" name="checkBox_2">
@@ -71,10 +71,124 @@
      <height>24</height>
     </rect>
    </property>
-   <property name="text">
-    <string>CheckBox</string>
+   <property name="bottomMargin">
+    <number>30</number>
    </property>
-  </widget>
+   <item>
+    <widget class="QLabel" name="titleLabel">
+     <property name="text">
+      <string>Application Settings</string>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font-size: 18pt; font-weight: bold; color: #2c3e50; margin-bottom: 10px;</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="optionsGroup">
+     <property name="title">
+      <string>General Settings</string>
+     </property>
+     <layout class="QVBoxLayout" name="optionsLayout">
+      <property name="spacing">
+       <number>12</number>
+      </property>
+      <item>
+       <widget class="QRadioButton" name="themeRadioButton">
+        <property name="text">
+         <string>Enable Dark Theme</string>
+        </property>
+        <property name="checked">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="notificationsCheckBox">
+        <property name="text">
+         <string>Enable Notifications</string>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="autoSaveCheckBox">
+        <property name="text">
+         <string>Auto-save Changes</string>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <spacer name="verticalSpacer">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeType">
+      <enum>QSizePolicy::Expanding</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>40</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="buttonLayout">
+     <property name="spacing">
+      <number>15</number>
+     </property>
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="applyButton">
+       <property name="minimumSize">
+        <size>
+         <width>120</width>
+         <height>45</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>Apply Settings</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer_2">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </item>
+  </layout>
  </widget>
  <resources/>
  <connections/>
